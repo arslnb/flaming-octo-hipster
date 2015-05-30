@@ -40,7 +40,7 @@ instance/app.db
 instance/search-index/
 app/static/uploads/teacher/
 curious/static/uploads/user/
-node_modules
+node_modules/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
