@@ -1,0 +1,17 @@
+{
+  "name": "nit",
+  "version": "0.0.0",
+  "authors": [
+    "Arsalan Bashir <mail@arsalanbashir.com>"
+  ],
+  "description": "NIT Website Assets",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
