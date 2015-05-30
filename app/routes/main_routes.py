@@ -11,7 +11,7 @@ def blog():
 	return 'This is the great blog'
 
 #Life
-@nit.routes('/life')
+@nit.route('/life')
 def life():
 	return 'life at nit sucks.'
 

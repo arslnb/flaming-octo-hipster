@@ -9,5 +9,5 @@ def departments():
 #Departments pagez
 @nit.route('/departments/<departmentname>')
 def department_page(departmentname):
-	return 'This is the' + departmentname + 'department page.'
+	return 'This is the  ' + departmentname + 'department page.'
 

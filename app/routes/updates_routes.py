@@ -5,7 +5,7 @@ def updates():
 	return 'This is the updates page.'
 #Events
 @nit.route('/events')
-def updates():
+def events():
 	return 'This is the events page.'
 
 #upcoming activities
