@@ -13,7 +13,7 @@ class SignupForm(Form):
 	department  = TextField('Department', [validators.Required('Please enter department.')])
 	year_joined = TextField('Year joined', [validators.Required('Please enter your year of joining')])
 	password    = PasswordField('Password', [validators.Required('Enter a valid password')])
-	user_type   = RadioField('Are you ', choices=[('student','student'),('faculty','faculty')])
+	user_type   = RadioField('Are you a teacher or student?', choices=[('student','student'),('faculty','faculty')])
 	enroll		= TextField('Enrollment number',[validators.Required('Please enter your enrollment no.')])
 	roll_no     = TextField('Class Roll no')
 

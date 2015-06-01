@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>National Institute of Technology, Hazratbal</title>
+	{% assets "css_home" %}
+        <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    {% assets "js_home" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+</head>
+<body>
+	<nav class="main-menu">
+		<ul class="menu">
+			<li><a href="/departments">Departments</a></li>
+			<li><a href="/academics">Academia</a></li>
+			<li class="logo-holder"></li>
+			<li><a href="/events">Events</a></li>
+			<li><a href="/register" class="reg-or-log">Register</a> <span class="font-break">or</span> <a href="/login" class="reg-or-log">Log In</a></li>
+		</ul>
+	</nav>
+	{% block content %}{% endblock %}
+</body>
+</html>

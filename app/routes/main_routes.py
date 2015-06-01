@@ -1,9 +1,15 @@
 from app import nit
+from flask import render_template
+
+current_user = "Arsalan"
 
 #Main Page
 @nit.route('/')
 def home():
-	return 'home page'
+	if current_user is None:
+		return render_template("home.html")
+	else:
+		return render_template("dashboard.html")
 
 #Blog
 @nit.route('/blog')
