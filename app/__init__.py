@@ -4,7 +4,7 @@ from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
 from flask.ext import assets
 import os
-
+import sass
 nit = Flask(__name__, instance_relative_config=True)
 nit.config.from_pyfile('configure.py')
 
@@ -19,9 +19,9 @@ nit.config['SECRET_KEY'] = "stay-hungry-stay-foolish"
 
 env = assets.Environment(nit)
 env.load_path = [
+    os.path.join(os.path.dirname(__file__), 'bower_components'),
     os.path.join(os.path.dirname(__file__), 'sass'),
     os.path.join(os.path.dirname(__file__), 'coffee'),
-    os.path.join(os.path.dirname(__file__), 'bower_components'),
 ]
 
 env.register(
@@ -33,13 +33,13 @@ env.register(
     )
 )
 
-env.register(
-    'css_home',
-    assets.Bundle(
-        '_home.sass',
-        filters='sass',
-        output='css_home.css'
-    )
-)
-
+# env.register(
+#     'css_home',
+#     assets.Bundle(
+#         '_home.sass',
+#         filters='scss,sass',
+#         output='css_home.css'
+#     )
+# )
+sass.foo()
 import routes

@@ -2,12 +2,11 @@
 <html>
 <head>
 	<title>National Institute of Technology, Hazratbal</title>
-	{% assets "css_home" %}
-        <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"></script>
-    {% endassets %}
-    {% assets "js_home" %}
+	
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css_home.css') }}"></script>
+     {% assets "js_home"%}
         <script type="text/javascript" src="{{ ASSET_URL }}"></script>
-    {% endassets %}
+     {% endassets %}
 </head>
 <body>
 	<nav class="main-menu">

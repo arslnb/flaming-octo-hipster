@@ -1,5 +1,5 @@
 from app import nit
-
+from flask import render_template
 # MainDepartments Page
 @nit.route('/departments')
 def departments():
@@ -9,5 +9,5 @@ def departments():
 #Departments pagez
 @nit.route('/departments/<departmentname>')
 def department_page(departmentname):
-	return 'This is the  ' + departmentname + 'department page.'
+	return render_template('department_base.html', depname = departmentname)
 
