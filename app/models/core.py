@@ -1,6 +1,7 @@
 from app import nit, db
 from werkzeug import generate_password_hash, check_password_hash
 import datetime, hashlib, uuid, flask.ext.whooshalchemy
+from departments import Department
 
 class User(db.Model):
 	__tablename__ = 'user'
@@ -47,12 +48,13 @@ class User(db.Model):
 	def __repr__(self):
 		return '<User %r>' % (self.email)
 
-class Faculty(db.Model)
+class Faculty(db.Model):
 	__tablename__ = 'faculty'
 	id = db.Column(db.Integer, primary_key = True)
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-	department = db.Column(db.String(3))
+	#Added foriegnkey relation to departments
+	department_code = db.Column(db.String(3), db.ForeignKey('department.code'))
 	qualification = db.Column(db.Text())
 	year_joined = db.Column(db.Integer)
 
@@ -60,17 +62,31 @@ class Faculty(db.Model)
 		return '<Faculty %r>' % (self.department)
 
 
-class Student(db.Model)
+class Student(db.Model):
 	__tablename__ = 'student'
 	id = db.Column(db.Integer, primary_key = True)
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-	department = db.Column(db.String(3))
+	#Added foriegnkey relation to departments
+	department_code = db.Column(db.String(3), db.ForeignKey('department.code'))
 	year_of_enroll = db.Column(db.String(2))
 	class_roll = db.Column(db.Integer)
 
 	def __repr__(self):
 		return '<Faculty %r>' % (self.department)
+
+class Notification(db.Model):
+	__tablename__ = 'notification'
+	id = db.Column(db.Integer(),primary_key = True)
+	user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
+	notification_title = db.Column(db.String())
+
+	def __init__(self, notification_title):
+		self.notification_title = notification_title
+
+	def __repr__(self):
+		return '<Notification %r' % (self.notification_title) 
+
 
 
 

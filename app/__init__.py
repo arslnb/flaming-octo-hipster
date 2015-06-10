@@ -5,17 +5,12 @@ from flask.ext.migrate import Migrate, MigrateCommand
 from flask.ext import assets
 import os
 import sass
+
 nit = Flask(__name__, instance_relative_config=True)
 nit.config.from_pyfile('configure.py')
 
 db = SQLAlchemy(nit)
 
-migrate = Migrate(nit, db)
-manager = Manager(nit)
-manager.add_command('db', MigrateCommand)
-
-nit.config['CSRF_ENABLED'] = True
-nit.config['SECRET_KEY'] = "stay-hungry-stay-foolish"
 
 env = assets.Environment(nit)
 env.load_path = [

@@ -41,7 +41,7 @@ instance/search-index/
 app/static/uploads/teacher/
 curious/static/uploads/user/
 node_modules/
-.sass-cache/
+*.sass-cache/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
