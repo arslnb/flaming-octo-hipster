@@ -1,12 +1,12 @@
 {% extends "base.html"%}
-
+ 
 {% block content%}
-<div class="container">
+<div class="container dep-container">
 	<h1 class = "dep-heading">{{depname}} Department</h2>
 
+	<div class="container">
 	<div class="row">
-	<div class="column col-md-3 dep-links">
-		<ul class="links">
+		<ul class="dep-links">
 			<li><a href="/">Home</a></li>
 			<li><a href="/">Faculty</a></li>
 			<li><a href="/">Courses</a></li>
@@ -15,10 +15,11 @@
 		</ul>
 	</div>
 	
-	<div class="column col-md-9 dep-main-content">
+	<div class="row row-md-10 dep-main-content">
 		<p>The Department of Information Technology was established in 2007, offering four year undergraduate programme(B.Tech) in Information Technology. This undergraduate programme is of 4 years duration with the first year spread over two semesters which is common to all the branches. The intake capacity of the department was 40 in 2007 and then subsequently increased to 55 in 2009. The Department offers a broad curriculum including: Database Management, Software Engineering, Management of Information Systems, Data mining, Computer Graphics, Advanced Internet Technology, Computer Networks, Operating System, Data Structures and Algorithms as the main courses and other courses in collaboration with the other departments of the institute at the undergraduate level.
 		</p>
 	</div>
-
+	</div>
 </div>
+
 {% endblock%}
