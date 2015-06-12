@@ -1,6 +1,8 @@
 @import ../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss
 $TealOrange: #F5A623
 
+*
+	font-family: 'Lato'
 
 .main-menu
 	margin: 110px 2px
@@ -45,3 +47,86 @@ $TealOrange: #F5A623
 	&:hover
 		color: #9A9A9A !important
 		text-decoration: underline !important
+
+*
+	margin: 0
+
+html, body
+	height: 100%
+
+.page-wrap
+	min-height: 100%
+	margin-bottom: -50px 
+
+.page-wrap:after
+	content: ""
+	display: block
+
+.site-footer, .page-wrap:after
+	height: 50px
+
+.site-footer
+	transition: font-size ease-in-out 0.4s
+	h5
+		text-transform: uppercase
+		text-align: center
+		letter-spacing: 0.5px
+		font-size: 12px
+		color: #4A4A4A
+		span
+			color: #DD0900
+			font-size: 12px
+			transition: font-size ease-in-out 0.4s
+	&:hover
+		h5 span
+			font-size: 14px
+
+.signupform
+	max-width: 800px
+	margin: 0 auto
+	border: 1px #DDD solid
+	padding: 30px
+	h2
+		text-transform: uppercase
+		font-family: 'Lato'
+		color: $TealOrange
+		span
+			font-size: 12px
+			padding-top: 13px
+			color: #9A9A9A
+			span
+				color: $TealOrange
+				font-size: 16px
+				padding: 0px 5px
+	form input 
+		margin-top: 15px
+	form button
+		margin-top: 15px
+		width: 100%
+		background: $TealOrange
+		border: 2px $TealOrange solid
+		color: #FFF
+		text-transform: uppercase
+		transition: background ease-in-out 0.4s, color ease-in-out 0.4s
+		&:hover
+			background: #FFF
+			color: $TealOrange
+			border: 2px $TealOrange solid
+
+.error
+	text-align: center
+	padding: 10px
+	background: rgba(219, 16, 21, 0.1)
+	border: 1px RGB(219, 16, 21) solid
+	margin: 30px 0px 10px 0px
+	border-radius: 5px
+
+.leftname
+	width: 49%
+	float: left
+	margin-bottom: 15px
+
+.rightname
+	width: 49%
+	float: right
+	margin-bottom: 15px

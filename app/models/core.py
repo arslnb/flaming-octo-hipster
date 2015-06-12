@@ -1,6 +1,6 @@
 from app import nit, db
 from werkzeug import generate_password_hash, check_password_hash
-import datetime, hashlib, uuid, flask.ext.whooshalchemy
+import datetime, hashlib, uuid
 
 class User(db.Model):
 	__tablename__ = 'user'
@@ -12,22 +12,17 @@ class User(db.Model):
 	salt = db.Column(db.Text(255))
 	resethash = db.Column(db.Text(255))
 
-	notification = db.relationship('Notification', backref = 'user', lazy = 'dynamic')
+	#notification = db.relationship('Notification', backref = 'user', lazy = 'dynamic')
 	faculty = db.relationship('Faculty', backref = 'user', lazy = 'dynamic')
 	student = db.relationship('Student', backref = 'user', lazy = 'dynamic')
 
-	def __init__(self, firstname, lastname, email, password, is_faculty):
+	def __init__(self, firstname, lastname, email, password):
 		self.email = email
 		self.firstname = firstname
 		self.lastname = lastname
 		self.salt = uuid.uuid4().hex
 		self.set_password(password + self.salt)
 		self.resethash = self.generate_regen_salt()
-
-		if is_faculty:
-			self.makeFaculty()
-		else:
-			self.makeStudent()
 
 	def set_password(self, password):
 		self.pwdhash = generate_password_hash(password)
@@ -44,10 +39,25 @@ class User(db.Model):
 	def makeStudent(self):
 		pass
 
+	def is_authenticated(self):
+		return True
+
+	def is_active(self):
+		return True
+
+	def is_anonymous(self):
+		return False
+
+	def get_id(self):
+		return self.id
+
+	def is_active(self):
+		return True
+
 	def __repr__(self):
 		return '<User %r>' % (self.email)
 
-class Faculty(db.Model)
+class Faculty(db.Model):
 	__tablename__ = 'faculty'
 	id = db.Column(db.Integer, primary_key = True)
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
@@ -60,7 +70,7 @@ class Faculty(db.Model)
 		return '<Faculty %r>' % (self.department)
 
 
-class Student(db.Model)
+class Student(db.Model):
 	__tablename__ = 'student'
 	id = db.Column(db.Integer, primary_key = True)
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))

@@ -370,8 +370,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../static/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../static/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../static/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../static/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../static/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../static/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 /* line 22, /Users/arsalanbashir/Desktop/nit/app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_glyphicons.scss */
 .glyphicon {
@@ -8567,19 +8567,24 @@ button.close {
     display: none !important;
   }
 }
-/* line 5 */
+/* line 4 */
+* {
+  font-family: "Lato";
+}
+
+/* line 7 */
 .main-menu {
   margin: 110px 2px;
 }
 
-/* line 8 */
+/* line 10 */
 .menu {
   margin: 40px 0px;
   max-width: 980px;
   margin: 0 auto;
   list-style: none;
 }
-/* line 13 */
+/* line 15 */
 .menu li {
   display: inline;
   font-family: "Lato";
@@ -8587,18 +8592,18 @@ button.close {
   font-weight: 400;
   margin: 0 40px;
 }
-/* line 19 */
+/* line 21 */
 .menu li a {
   color: #9A9A9A;
   transition: color ease-in-out 0.3s;
 }
-/* line 22 */
+/* line 24 */
 .menu li a:hover {
   color: #F5A623;
   text-decoration: none;
 }
 
-/* line 26 */
+/* line 28 */
 .logo-holder {
   width: 600px;
   padding: 48px 45px 47px 45px;
@@ -8608,7 +8613,7 @@ button.close {
   background-position: center;
 }
 
-/* line 34 */
+/* line 36 */
 .font-break {
   font-family: "Lato";
   font-weight: 200;
@@ -8617,14 +8622,134 @@ button.close {
   padding: 0px 5px;
 }
 
-/* line 41 */
+/* line 43 */
 .reg-or-log {
   color: #F5A623 !important;
   transition: color ease-in-out 0.3s;
   text-decoration: underline;
 }
-/* line 45 */
+/* line 47 */
 .reg-or-log:hover {
   color: #9A9A9A !important;
   text-decoration: underline !important;
+}
+
+/* line 51 */
+* {
+  margin: 0;
+}
+
+/* line 54 */
+html, body {
+  height: 100%;
+}
+
+/* line 57 */
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+/* line 61 */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 65 */
+.site-footer, .page-wrap:after {
+  height: 50px;
+}
+
+/* line 68 */
+.site-footer {
+  transition: font-size ease-in-out 0.4s;
+}
+/* line 70 */
+.site-footer h5 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  color: #4A4A4A;
+}
+/* line 76 */
+.site-footer h5 span {
+  color: #DD0900;
+  font-size: 12px;
+  transition: font-size ease-in-out 0.4s;
+}
+/* line 81 */
+.site-footer:hover h5 span {
+  font-size: 14px;
+}
+
+/* line 84 */
+.signupform {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px #DDD solid;
+  padding: 30px;
+}
+/* line 89 */
+.signupform h2 {
+  text-transform: uppercase;
+  font-family: "Lato";
+  color: #F5A623;
+}
+/* line 93 */
+.signupform h2 span {
+  font-size: 12px;
+  padding-top: 13px;
+  color: #9A9A9A;
+}
+/* line 97 */
+.signupform h2 span span {
+  color: #F5A623;
+  font-size: 16px;
+  padding: 0px 5px;
+}
+/* line 101 */
+.signupform form input {
+  margin-top: 15px;
+}
+/* line 103 */
+.signupform form button {
+  margin-top: 15px;
+  width: 100%;
+  background: #F5A623;
+  border: 2px #F5A623 solid;
+  color: #FFF;
+  text-transform: uppercase;
+  transition: background ease-in-out 0.4s, color ease-in-out 0.4s;
+}
+/* line 111 */
+.signupform form button:hover {
+  background: #FFF;
+  color: #F5A623;
+  border: 2px #F5A623 solid;
+}
+
+/* line 116 */
+.error {
+  text-align: center;
+  padding: 10px;
+  background: rgba(219, 16, 21, 0.1);
+  border: 1px RGB(219, 16, 21) solid;
+  margin: 30px 0px 10px 0px;
+  border-radius: 5px;
+}
+
+/* line 124 */
+.leftname {
+  width: 49%;
+  float: left;
+  margin-bottom: 15px;
+}
+
+/* line 129 */
+.rightname {
+  width: 49%;
+  float: right;
+  margin-bottom: 15px;
 }

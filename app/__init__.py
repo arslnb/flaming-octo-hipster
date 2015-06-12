@@ -3,6 +3,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
 from flask.ext import assets
+from flask.ext.login import LoginManager
 import os
 
 nit = Flask(__name__, instance_relative_config=True)
@@ -13,6 +14,10 @@ db = SQLAlchemy(nit)
 migrate = Migrate(nit, db)
 manager = Manager(nit)
 manager.add_command('db', MigrateCommand)
+
+login_manager = LoginManager()
+login_manager.init_app(nit)
+login_manager.anonymous_user.anon = True
 
 nit.config['CSRF_ENABLED'] = True
 nit.config['SECRET_KEY'] = "stay-hungry-stay-foolish"
