@@ -8799,3 +8799,26 @@ html, body {
   float: right;
   margin-bottom: 15px;
 }
+
+/* line 166 */
+.profile-icon {
+  height: 40px;
+  width: 40px;
+  background: #DDD;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  margin: 0px 10px;
+  border-radius: 8px;
+}
+/* line 175 */
+.profile-icon span {
+  background: #FF0021;
+  color: #FFF;
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}

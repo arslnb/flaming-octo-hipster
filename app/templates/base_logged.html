@@ -17,7 +17,7 @@
 			<li><a href="/academics">Academia</a></li>
 			<a href="/"><li class="logo-holder"></li></a>
 			<li><a href="/events">Events</a></li>
-			<li><a href="/register" class="reg-or-log">Register</a> <span class="font-break">or</span> <a href="/login" class="reg-or-log">Log In</a></li>
+			<li><a href="#" class="reg-or-log">{{current_user.firstname}} {{current_user.lastname}}</a><div class="profile-icon"><span>3</span></div></li>
 		</ul>
 	</nav>
 	{% block content %}{% endblock %}

@@ -47,4 +47,4 @@ def register():
 @login_required
 @nit.route('/dashboard')
 def dashboard():
-	return 'This is your dashboard, %r' % (current_user.firstname)
+	return render_template("dashboard.html", current_user = current_user)
