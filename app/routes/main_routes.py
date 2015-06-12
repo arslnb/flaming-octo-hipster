@@ -1,7 +1,7 @@
 from app import nit
 from flask import render_template
 
-current_user = "Arsalan"
+current_user = "Arsalasn"
 
 #Main Page
 @nit.route('/')
