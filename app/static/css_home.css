@@ -8731,6 +8731,52 @@ html, body {
 }
 
 /* line 116 */
+.loginform {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px #DDD solid;
+  padding: 30px;
+}
+/* line 121 */
+.loginform h2 {
+  text-transform: uppercase;
+  font-family: "Lato";
+  color: #F5A623;
+}
+/* line 125 */
+.loginform h2 span {
+  font-size: 12px;
+  padding-top: 13px;
+  color: #9A9A9A;
+}
+/* line 129 */
+.loginform h2 span span {
+  color: #F5A623;
+  font-size: 16px;
+  padding: 0px 5px;
+}
+/* line 133 */
+.loginform form input {
+  margin-top: 15px;
+}
+/* line 135 */
+.loginform form button {
+  margin-top: 15px;
+  width: 100%;
+  background: #F5A623;
+  border: 2px #F5A623 solid;
+  color: #FFF;
+  text-transform: uppercase;
+  transition: background ease-in-out 0.4s, color ease-in-out 0.4s;
+}
+/* line 143 */
+.loginform form button:hover {
+  background: #FFF;
+  color: #F5A623;
+  border: 2px #F5A623 solid;
+}
+
+/* line 148 */
 .error {
   text-align: center;
   padding: 10px;
@@ -8740,14 +8786,14 @@ html, body {
   border-radius: 5px;
 }
 
-/* line 124 */
+/* line 156 */
 .leftname {
   width: 49%;
   float: left;
   margin-bottom: 15px;
 }
 
-/* line 129 */
+/* line 161 */
 .rightname {
   width: 49%;
   float: right;

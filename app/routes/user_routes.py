@@ -4,9 +4,26 @@ from flask.ext.login import LoginManager, login_user, current_user, logout_user,
 from app.models import core
 
 #Login Page
-@nit.route('/login')
+@nit.route('/login', methods = ['GET', 'POST'])
 def login():
-	return 'login page'
+	form = forms.login.LoginForm()
+	no_of_users = len(core.User.query.all())
+
+	if request.method == 'POST':
+		if form.email.data != "" and form.password.data != "":
+			user = core.User.query.filter_by(email = form.email.data).first()
+			print user
+			if user is not None:
+				if user.check_password(form.password.data):
+					login_user(user)
+					return redirect(url_for('dashboard'))
+				else:
+					return render_template("login.html", form = form, no_of_users = no_of_users, message = "Oops! Incorrect Password. Try again!")
+			else:
+				return render_template("login.html", form = form, no_of_users = no_of_users, message = "Oops! You need to <a href='/register'>sign up</a> first.")
+		else:
+			return render_template("login.html", form = form, no_of_users = no_of_users, message = "Oops! You missed out something. Try again!")
+	return render_template("login.html", form = form, no_of_users = no_of_users)
 
 #Register Page
 @nit.route('/register', methods = ['GET', 'POST'])

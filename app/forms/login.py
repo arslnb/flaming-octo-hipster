@@ -4,7 +4,7 @@ from wtforms.validators import Required
 
 class LoginForm(Form):
 	email   = TextField('E-mail', validators = [Required()])
-	pasword = PasswordField('Password', [validators.Required('Please enter a password.')])
+	password = PasswordField('Password', [validators.Required('Please enter a password.')])
 
 class SignupForm(Form):
 	name 	    = TextField('First name',[validators.Required('Please enter first name.')])
