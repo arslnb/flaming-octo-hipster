@@ -17,7 +17,16 @@
 			<li><a href="/academics">Academia</a></li>
 			<a href="/"><li class="logo-holder"></li></a>
 			<li><a href="/events">Events</a></li>
-			<li><a href="#" class="reg-or-log">{{current_user.firstname}} {{current_user.lastname}}</a><div class="profile-icon"><span>3</span></div></li>
+			<li><a href="#" class="reg-or-log">{{current_user.firstname}} {{current_user.lastname}}</a><button class="profile-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span>3</span></button>
+			<ul class="dropdown-menu dropdown-menu-right" role="menu">
+					<div class="notif-title">Notifications</div>
+				    <li><a href="#">Action</a></li>
+				    <li><a href="#">Another action</a></li>
+				    <li><a href="#">Something else here</a></li>
+				    <li><a href="#">Separated link</a></li>
+				    <div class="log-title"><a href="/logout">Log out</a></div>
+				  </ul>
+			</li>
 		</ul>
 	</nav>
 	{% block content %}{% endblock %}

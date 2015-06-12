@@ -48,3 +48,9 @@ def register():
 @nit.route('/dashboard')
 def dashboard():
 	return render_template("dashboard.html", current_user = current_user)
+
+@login_required
+@nit.route('/logout')
+def logout():
+	logout_user()
+	return redirect(url_for('home'))

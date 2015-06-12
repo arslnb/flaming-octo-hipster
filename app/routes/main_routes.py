@@ -6,7 +6,7 @@ current_user = "Arsalasn"
 #Main Page
 @nit.route('/')
 def home():
-	if current_user is None:
+	if current_user is not None:
 		return render_template("home.html")
 	else:
 		return render_template("dashboard.html")
