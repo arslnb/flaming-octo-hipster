@@ -2,12 +2,12 @@
   font-family: "Lato"; }
 
 .main-menu {
-  margin: 110px 2px; }
+  margin: 150px 100px 80px 100px; }
 
 .menu {
   margin: 40px 0px;
   max-width: 1300px;
-  text-align: center;
+  text-align: left;
   list-style: none; }
   .menu li {
     display: inline;
@@ -25,10 +25,10 @@
 
 .logo-holder {
   width: 600px;
-  padding: 48px 45px 47px 45px;
+  padding: 85px 65px 47px 65px;
   background: url("logo.png");
   background-repeat: no-repeat;
-  background-size: 100px;
+  background-size: 130px;
   background-position: center;
   transition: all ease-in-out 0.4s; }
 
@@ -41,9 +41,11 @@
   font-weight: 200;
   text-transform: lowercase;
   font-style: italic;
+  float: right;
   padding: 0px 5px; }
 
 .reg-or-log {
+  float: right;
   color: #f5a623 !important;
   transition: color ease-in-out 0.3s;
   text-decoration: underline; }
@@ -228,12 +230,50 @@ html, body {
 .main-text {
     font-size: 30px;
     font-weight:700;
-    margin-top: 180px;
-    margin-left: 130px;
+    margin-top: 50px;
+    margin-left: 0px;
 }
 
 .main-text h1{
     font-family: 'Lato';
     color: #9A9A9A;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.main-text p{
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 36px;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.main-text p span{
+  font-weight: 400;
+  color: #000;
+}
+
+.chevron-image{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 44%;
+  width: 100%;
+  background: url('/static/assets/img/main.png');
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 40px;
+  -webkit-transform: skew(0deg, -12deg);
+  -moz-transform: skew(0deg, -12deg);
+  -ms-transform: skew(0deg, -12deg);
+  -o-transform: skew(0deg, -12deg);
+  transform: skew(0deg, -12deg);
+}
+
+.filler{
+  height: 3000px;
+  width: 100%;
 }
