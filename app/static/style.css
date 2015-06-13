@@ -1,0 +1,202 @@
+* {
+  font-family: "Lato"; }
+
+.main-menu {
+  margin: 110px 2px; }
+
+.menu {
+  margin: 40px 0px;
+  max-width: 980px;
+  margin: 0 auto;
+  list-style: none; }
+  .menu li {
+    display: inline;
+    font-family: "Lato";
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0 40px; }
+    .menu li a {
+      color: #9a9a9a;
+      transition: color ease-in-out 0.3s; }
+      .menu li a:hover {
+        color: #f5a623;
+        text-decoration: none; }
+
+.logo-holder {
+  width: 600px;
+  padding: 48px 45px 47px 45px;
+  background: url("logo.png");
+  background-repeat: none;
+  background-size: 100px;
+  background-position: center; }
+
+.font-break {
+  font-family: "Lato";
+  font-weight: 200;
+  text-transform: lowercase;
+  font-style: italic;
+  padding: 0px 5px; }
+
+.reg-or-log {
+  color: #f5a623 !important;
+  transition: color ease-in-out 0.3s;
+  text-decoration: underline; }
+  .reg-or-log:hover {
+    color: #9a9a9a !important;
+    text-decoration: underline !important; }
+
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -50px; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+.site-footer, .page-wrap:after {
+  height: 50px; }
+
+.site-footer {
+  transition: font-size ease-in-out 0.4s; }
+  .site-footer h5 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    color: #4a4a4a; }
+    .site-footer h5 span {
+      color: #dd0900;
+      font-size: 12px;
+      transition: font-size ease-in-out 0.4s; }
+  .site-footer:hover h5 span {
+    font-size: 14px; }
+
+.signupform {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px #dddddd solid;
+  padding: 30px; }
+  .signupform h2 {
+    text-transform: uppercase;
+    font-family: "Lato";
+    color: #f5a623; }
+    .signupform h2 span {
+      font-size: 12px;
+      padding-top: 13px;
+      color: #9a9a9a; }
+      .signupform h2 span span {
+        color: #f5a623;
+        font-size: 16px;
+        padding: 0px 5px; }
+  .signupform form input {
+    margin-top: 15px; }
+  .signupform form button {
+    margin-top: 15px;
+    width: 100%;
+    background: #f5a623;
+    border: 2px #f5a623 solid;
+    color: white;
+    text-transform: uppercase;
+    transition: background ease-in-out 0.4s, color ease-in-out 0.4s; }
+    .signupform form button:hover {
+      background: white;
+      color: #f5a623;
+      border: 2px #f5a623 solid; }
+
+.loginform {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px #dddddd solid;
+  padding: 30px; }
+  .loginform h2 {
+    text-transform: uppercase;
+    font-family: "Lato";
+    color: #f5a623; }
+    .loginform h2 span {
+      font-size: 12px;
+      padding-top: 13px;
+      color: #9a9a9a; }
+      .loginform h2 span span {
+        color: #f5a623;
+        font-size: 16px;
+        padding: 0px 5px; }
+  .loginform form input {
+    margin-top: 15px; }
+  .loginform form button {
+    margin-top: 15px;
+    width: 100%;
+    background: #f5a623;
+    border: 2px #f5a623 solid;
+    color: white;
+    text-transform: uppercase;
+    transition: background ease-in-out 0.4s, color ease-in-out 0.4s; }
+    .loginform form button:hover {
+      background: white;
+      color: #f5a623;
+      border: 2px #f5a623 solid; }
+
+.error {
+  text-align: center;
+  padding: 10px;
+  background: rgba(219, 16, 21, 0.1);
+  border: 1px RGB(219, 16, 21) solid;
+  margin: 30px 0px 10px 0px;
+  border-radius: 5px; }
+
+.leftname {
+  width: 49%;
+  float: left;
+  margin-bottom: 15px; }
+
+.rightname {
+  width: 49%;
+  float: right;
+  margin-bottom: 15px; }
+
+.profile-icon {
+  border: none;
+  height: 40px;
+  width: 40px;
+  background: #dddddd;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  margin: 0px 10px;
+  border-radius: 8px; }
+  .profile-icon span {
+    background: #ff0021;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: -5px;
+    right: -5px; }
+
+.dropdown-menu {
+  top: 180px;
+  float: right !important;
+  right: 318px; }
+  .dropdown-menu .divider {
+    width: 100%;
+    height: 2px;
+    background: #dddddd;
+    border-top: 1px #dddddd solid; }
+
+.notif-title {
+  color: #9a9a9a;
+  text-align: center;
+  padding: 5px 0px 8px 0px;
+  border-bottom: 1px #dddddd solid; }
+
+.log-title {
+  color: #9a9a9a;
+  text-align: center;
+  padding: 8px 0px 5px 0px;
+  border-top: 1px #dddddd solid; }

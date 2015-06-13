@@ -2,7 +2,7 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
-from flask.ext import assets
+# from flask.ext import assets
 from flask.ext.login import LoginManager
 import os
 
@@ -22,6 +22,8 @@ login_manager.anonymous_user.anon = True
 nit.config['CSRF_ENABLED'] = True
 nit.config['SECRET_KEY'] = "stay-hungry-stay-foolish"
 
+
+""" 
 env = assets.Environment(nit)
 env.load_path = [
     os.path.join(os.path.dirname(__file__), 'sass'),
@@ -46,5 +48,7 @@ env.register(
         output='css_home.css'
     )
 )
+
+"""
 
 import routes
