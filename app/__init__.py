@@ -34,6 +34,7 @@ env.load_path = [
 env.register(
     'js_home',
     assets.Bundle(
+        'hello.coffee'
         'jquery/dist/jquery.min.js',
         'bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
         output='js_home.js'
