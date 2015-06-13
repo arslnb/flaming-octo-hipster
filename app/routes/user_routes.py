@@ -54,3 +54,8 @@ def dashboard():
 def logout():
 	logout_user()
 	return redirect(url_for('home'))
+
+@login_required
+@nit.route('/dashboard/updateprofile')
+def updateprifile():
+	return render_template('updateprofile.html', current_user = current_user)
