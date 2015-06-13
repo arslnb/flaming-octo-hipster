@@ -1,5 +1,5 @@
- # from flask.ext.wtf import Form 
- # from wtforms import TextField
+from flask.ext.wtf import Form
+from wtform import TextField
 
- # class UpdateForm(Form):
+class UpdateForm(Form):
 	
