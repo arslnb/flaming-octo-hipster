@@ -207,10 +207,17 @@ html, body {
   padding: 8px 0px 5px 0px;
   border-top: 1px #dddddd solid; }
 
+.main-text {
+    span {
+      display:inline-block;
+      color: #f5a623;
+  }
+}
+
 #dynamic-text-wrapper {
     display:inline-block;
     position:relative;
-    height: 50px;
+    height: 34px;
 }
 #old-text, #new-text {
     position:absolute;
