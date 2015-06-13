@@ -14,6 +14,7 @@
     font-family: "Lato";
     text-transform: uppercase;
     font-weight: 400;
+    font-size: 16px;
     margin: 0 40px; }
     .menu li a {
       color: #9a9a9a;
@@ -26,9 +27,14 @@
   width: 600px;
   padding: 48px 45px 47px 45px;
   background: url("logo.png");
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: 100px;
-  background-position: center; }
+  background-position: center;
+  transition: all ease-in-out 0.4s; }
+
+.logo-holder:hover{
+  opacity: 0.4;
+}
 
 .font-break {
   font-family: "Lato";
