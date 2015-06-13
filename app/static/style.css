@@ -273,7 +273,115 @@ html, body {
   transform: skew(0deg, -12deg);
 }
 
-.filler{
-  height: 3000px;
+.chevron-image-left{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 44%;
   width: 100%;
+  background: url('/static/assets/img/life.png');
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 180px;
+  -webkit-transform: skew(0deg, 12deg);
+  -moz-transform: skew(0deg, 12deg);
+  -ms-transform: skew(0deg, 12deg);
+  -o-transform: skew(0deg, 12deg);
+  transform: skew(0deg, 12deg);
+}
+
+.events{
+  margin-top: 460px;
+  margin-right: 160px;
+  float: right;
+}
+
+.events h1{
+  text-align: right;
+  color: #f5a623;
+}
+
+.events p{
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 36px;
+  max-width: 700px;
+  margin-top: 20px; 
+}
+
+.events p span{
+   font-weight: 400;
+  color: #000; 
+}
+
+.event-row{
+   margin-top: 730px; 
+   width: 100%;
+   text-align: left;
+}
+
+.event-row div .event-box{
+  border: 1px #DDD solid;
+  margin-left: 5px;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  transition: box-shadow ease-in-out 0.3s;
+}
+
+.event-box:hover{
+  box-shadow: rgba(0, 0, 0, 0.10) 0.5px 0.5px 15px;
+}
+
+.event-box h3{
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #f5a623;
+  font-size: 20px;
+}
+
+.event-box p{
+ font-family: 'Lato';
+  font-weight: 300;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 32px;
+  margin-top: 20px;  
+}
+
+.event-box button{
+  width: 100%;
+  background: #f5a623;
+  border-radius: 0px;
+  color: #FFF;
+  border: 2px #f5a623 solid;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.event-box button:hover{
+  color: #f5a623 !important;
+  background: #fff !important;
+  border: 2px #f5a623 solid;
+}
+
+.event-box .no-going{
+  text-align: center;
+  font-size: 14px;
+  color: #9A9A9A;
+  margin-top: 30px;
+}
+
+.nit-flat{
+  width: 100%;
+  height: 660px;
+  background: url('/static/assets/img/nitflat.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 800px;
+  opacity: 1;
 }
