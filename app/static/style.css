@@ -6,8 +6,8 @@
 
 .menu {
   margin: 40px 0px;
-  max-width: 980px;
-  margin: 0 auto;
+  max-width: 1300px;
+  text-align: center;
   list-style: none; }
   .menu li {
     display: inline;
@@ -15,7 +15,7 @@
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
-    margin: 0 40px; }
+    margin: 0px 80px 0px 0px; }
     .menu li a {
       color: #9a9a9a;
       transition: color ease-in-out 0.3s; }
@@ -207,21 +207,33 @@ html, body {
   padding: 8px 0px 5px 0px;
   border-top: 1px #dddddd solid; }
 
-.main-text {
-    span {
-      display:inline-block;
-      color: #f5a623;
-  }
-}
 
+.main-text span {
+    display:inline-block;
+}
 #dynamic-text-wrapper {
     display:inline-block;
     position:relative;
-    height: 34px;
+    height:33px;
 }
 #old-text, #new-text {
     position:absolute;
     display:block;
 }
-
 #new-text { display:none; }
+#dynamic-text-wrapper, #old-text, #new-text {
+    width:400px;
+    color: #f5a623;
+}
+.main-text {
+    font-size: 30px;
+    font-weight:700;
+    margin-top: 180px;
+    margin-left: 130px;
+}
+
+.main-text h1{
+    font-family: 'Lato';
+    color: #9A9A9A;
+    font-weight: 600;
+}
