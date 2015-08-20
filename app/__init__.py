@@ -2,7 +2,7 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
-# from flask.ext import assets
+from flask.ext import assets
 from flask.ext.login import LoginManager
 import os
 
@@ -23,23 +23,12 @@ nit.config['CSRF_ENABLED'] = True
 nit.config['SECRET_KEY'] = "stay-hungry-stay-foolish"
 
 
-""" 
 env = assets.Environment(nit)
 env.load_path = [
     os.path.join(os.path.dirname(__file__), 'sass'),
     os.path.join(os.path.dirname(__file__), 'coffee'),
     os.path.join(os.path.dirname(__file__), 'bower_components'),
 ]
-
-env.register(
-    'js_home',
-    assets.Bundle(
-        'hello.coffee'
-        'jquery/dist/jquery.min.js',
-        'bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
-        output='js_home.js'
-    )
-)
 
 env.register(
     'css_home',
@@ -50,6 +39,14 @@ env.register(
     )
 )
 
-"""
+env.register(
+    'js_home',
+    assets.Bundle(
+        'home.coffee',
+        'jquery/dist/jquery.min.js',
+        output='js_home.js'
+    )
+)
+
 
 import routes
